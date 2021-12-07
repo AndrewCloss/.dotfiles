@@ -1,0 +1,17 @@
+[user]
+name = Andrew Closs
+email = andrewcloss@gmail.com
+
+[core]
+editor = nvim
+
+[color]
+ui = true
+
+[alias]
+st = status -sb
+co = checkout
+c = commit
+ci = commit
+p = push
+l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=short
