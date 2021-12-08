@@ -1,0 +1,23 @@
+! For more information: 
+! ---------------------
+! https://wiki.archlinux.org/title/xmodmap
+! https://linux.die.net/man/1/xmodmap
+
+! Original Keychron K7 keymaps
+! -------------------------
+! capslock = 66
+! tilde    = 49
+! escape   = 9
+
+! Explanation of keysyms list
+! ---------------------------
+! The first keysym is used when no modifier key is pressed in conjunction with this key, the second with Shift, the third when the Mode_switch key is used with this key and the fourth when both the Mode_switch and Shift keys are used. 
+
+! Caps_Lock is a modifier key, must be treated differently
+clear lock
+! BELOW LINE IS BROKEN: second keysym re-triggers capslock without modifier key, likely because they're both modifier keys
+! keycode 66 = Escape Caps_Lock
+keycode 66 = Escape
+keycode 49 = Caps_Lock
+keycode  9 = asciitilde grave
+add lock = Caps_Lock

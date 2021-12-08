@@ -28,6 +28,7 @@ stow zsh
 stow tmux
 stow nvim
 stow git
+stow xmodmap
 
 # add zsh to valid login shells
 command -v zsh | sudo tee -a /etc/shells
