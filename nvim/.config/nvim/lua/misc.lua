@@ -2,6 +2,7 @@ local map = require('utils').map
 
 local silent = {silent = true}
 
+vim.api.nvim_command('set guifont=FiraCode\\ NF:h12')
 vim.api.nvim_command('set signcolumn=yes')
 vim.api.nvim_command('set relativenumber')
 vim.api.nvim_command('set nu rnu') -- hybrid line numbers
@@ -26,12 +27,14 @@ vim.api.nvim_command('set formatoptions+=nj')
 vim.api.nvim_command('set hlsearch incsearch') -- turns on highlighting search results and searching as you type.
 
 vim.opt.termguicolors = true
--- require("bufferline").setup{}
 
 vim.api.nvim_command('let g:startify_change_to_dir=0')
 vim.api.nvim_command('let g:startify_change_to_vcs_root = 1')
 
-
+vim.api.nvim_command('set laststatus=3')
 vim.api.nvim_command('hi StatusLine guibg=NONE ')
+
+vim.api.nvim_command('set cmdheight=0')
+
 
 

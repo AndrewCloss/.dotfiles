@@ -1,6 +1,7 @@
 require('misc') -- feline.nvim requires termguicolors
 require('config')
 require('mappings')
+require('terminal')
 
 -- Mappings require a plugin, delay load until plugins installed
 -- local fn = vim.fn
