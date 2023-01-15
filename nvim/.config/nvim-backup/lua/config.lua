@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
   -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim',
-    config = function() require('plugins.telescope') end,
+    config = function() require('plugins.telescope').load_extension('projects') end,
     requires = {
       'nvim-lua/plenary.nvim',  -- Useful Lua utilities
       'nvim-lua/popup.nvim',
@@ -29,6 +29,17 @@ return require('packer').startup(function(use)
   }
 
   use 'ggandor/lightspeed.nvim'
+
+  use {
+    "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Looks
   --------
@@ -44,8 +55,8 @@ return require('packer').startup(function(use)
   -- Statusline
   use {
     'famiu/feline.nvim',
-    branch = 'develop',
     config = function() require('plugins.statusline') end,
+    requires = 'kyazdani42/nvim-web-devicons',
   }
 
   use 'lukas-reineke/indent-blankline.nvim'
@@ -77,6 +88,8 @@ return require('packer').startup(function(use)
       'jose-elias-alvarez/nvim-lsp-ts-utils',
       'jose-elias-alvarez/null-ls.nvim',
       'nvim-lua/plenary.nvim',
+      'max397574/lua-dev.nvim',
+      'b0o/schemastore.nvim',
     }
   }
 

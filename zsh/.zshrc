@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Export nvm completion settings for lukechilds/zsh-nvm plugin
 # Note: This must be exported before the plugin is loaded
 export NVM_DIR=${HOME}/.nvm
@@ -11,7 +18,10 @@ compinit
 # End of lines added by compinstall
 
 # source plugins
-source ~/.zsh_plugins.sh
+# source ~/.zsh_plugins.sh
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
+antibody bundle romkatv/powerlevel10k
 
 # aliases
 alias sudo='sudo '
@@ -30,16 +40,6 @@ HISTSIZE=5000
 SAVEHIST=5000
 bindkey -v
 # End of lines configured by zsh-newuser-install
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 function greet {
   local RED='\033[0;31m'
@@ -66,3 +66,9 @@ if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
 
+# suppress locale that sometimes appears
+LC_CTYPE=en_US.UTF-5
+LC_ALL=en_US.UTF-5
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
