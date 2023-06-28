@@ -66,11 +66,8 @@ cmp.setup({
       },
     },
   },
-  experimental = {
-    -- I like the new menu better! Nice work hrsh7th
-    native_menu = true,
-    -- Let's play with this for a day or two
-    -- ghost_text = false,
+  view = {
+    entries = "native",
   },
 })
 
@@ -91,7 +88,7 @@ cmp.setup({
 -- })
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 require('lspconfig')['eslint'].setup {
   capabilities = capabilities

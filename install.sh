@@ -13,14 +13,14 @@ nix-env -iA \
   nixpkgs.stow \
   nixpkgs.tmux \
   nixpkgs.neovim \
-  nixpkgs.gcc `# compiler` \
-  nixpkgs.ripgrep `# for telescope.nvim` \
-  nixpkgs.nodejs \
-  nixpkgs.nodePackages.npm \
-  nixpkgs.nodePackages.vls \
-  nixpkgs.nodePackages.typescript \
-  nixpkgs.nodePackages.typescript-language-server \
-  nixpkgs.sumneko-lua-language-server
+  # nixpkgs.gcc `# compiler` \
+  # nixpkgs.ripgrep `# for telescope.nvim` \
+  # nixpkgs.nodejs \
+  # nixpkgs.nodePackages.npm \
+  # nixpkgs.nodePackages.vls \
+  # nixpkgs.nodePackages.typescript \
+  # nixpkgs.nodePackages.typescript-language-server \
+  # nixpkgs.sumneko-lua-language-server
   # nixpkgs.nodePackages.intelephense \
 
 # stow
@@ -28,7 +28,6 @@ stow zsh
 stow tmux
 stow nvim
 stow git
-stow xmodmap
 
 # add zsh to valid login shells
 command -v zsh | sudo tee -a /etc/shells
@@ -53,4 +52,4 @@ antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 /home/$(echo $USER)/.nix-profile/bin/zsh
 
 # auto-install Neovim packages
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
