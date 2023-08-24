@@ -27,10 +27,8 @@ antibody bundle romkatv/powerlevel10k
 alias sudo='sudo '
 alias vim='nvim'
 alias pa='php artisan'
-alias ls='ls -al'
-
-# Swap escape with caps lock
-# setxkbmap -option caps:swapescape
+alias ls="exa --color=always --icons --group-directories-first"
+# alias ls='ls -al'
 
 if [ -e /home/$(echo $USER)/.nix-profile/etc/profile.d/nix.sh ]; then . /home/$(echo $USER)/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
@@ -72,3 +70,5 @@ LC_ALL=en_US.UTF-5
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if [ -e /home/andrew/.nix-profile/etc/profile.d/nix.sh ]; then . /home/andrew/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

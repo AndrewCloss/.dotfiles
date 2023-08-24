@@ -15,5 +15,3 @@ zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 
 jeffreytse/zsh-vi-mode
-
-coltondick/zsh-dircolors-nord.git
