@@ -1,0 +1,3 @@
+[submodule "zdotdir"]
+	path = zdotdir
+	url = git@github.com:AndrewCloss/zdotdir.git

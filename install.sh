@@ -1,7 +1,7 @@
 # clone this project
 [ -d ~/.config/zsh ] && rm -rf ~/.config/zsh
 ZDOTDIR=~/.config/zsh
-git clone --branch main https://github.com/AndrewCloss/zdotdir $ZDOTDIR
+cp -r "$(dirname "$0")/zdotdir" $ZDOTDIR
 
 # source the .zshenv from ZDOTDIR
 [ -f ~/.zshenv ] && mv -f ~/.zshenv ~/.zshenv.bak
