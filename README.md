@@ -16,17 +16,17 @@ alias _=sudo
 alias l=ls
 alias g=git
 
+# more ways to ls (mask)
+alias ls="exa -l --color=always --icons --group-directories-first"
+alias la="exa -lah --color=always --icons --group-directories-first"
+alias ldot='exa -ld --color=always --icons --group-directories-first .*'
+
 # git
 alias ga=git add .
 alias gs=git status
 alias gc=git checkout
 alias gcb=git checkout -b
 alias gca=git commit --amend
-
-# more ways to ls (mask)
-alias ls="exa -l --color=always --icons --group-directories-first"
-alias la="exa -lah --color=always --icons --group-directories-first"
-alias ldot='exa -ld --color=always --icons --group-directories-first .*'
 
 # cat (mask)
 alias cat=batcat
@@ -55,4 +55,6 @@ A sample antidote `.zsh_plugins.txt` file that bundles plugins with the followin
 - Lots of [helpful plugins](https://github.com/unixorn/awesome-zsh-plugins)!
 
 ## Installation
-Run `./install.sh`
+
+1. Run `./install.sh`
+2. Copy `.wezterm.lua` to your bare metal machine's HOME directory. e.g. `C:\Users\andrew\.wezterm.lua`
