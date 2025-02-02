@@ -2,6 +2,12 @@
 
 > A sample shell config using ZSH.
 
+## Commands
+
+```
+navi => command-line cheatsheet
+```
+
 ## Aliases
 
 ```
@@ -17,13 +23,22 @@ alias gc=git checkout
 alias gcb=git checkout -b
 alias gca=git commit --amend
 
-# more ways to ls
-alias la="ls -lah"
-alias ldot='ls -ld .*'
+# more ways to ls (mask)
+alias ls="exa -l --color=always --icons --group-directories-first"
+alias la="exa -lah --color=always --icons --group-directories-first"
+alias ldot='exa -ld --color=always --icons --group-directories-first .*'
+
+# cat (mask)
+alias cat=batcat
 
 # find
+alias fzf="fzf --preview 'batcat --color=always {}'"
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
+
+# tar
+alias tarls="tar -tvf"
+alias untar="tar -xf"
 ```
 
 ## What's included

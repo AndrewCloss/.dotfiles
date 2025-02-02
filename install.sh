@@ -27,8 +27,10 @@ sudo usermod -a -G docker $USER
 
 # install boilerplate apps
 sudo apt update
-sudo apt install -y zsh exa unzip vim
+sudo apt install -y zsh exa vim bat fzf ripgrep
 sudo apt -y autoremove
+bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+source $ZDOTDIR/.zshrc
 
 # git
 git config --global user.name "Andrew Closs"
