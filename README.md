@@ -17,28 +17,29 @@ alias l=ls
 alias g=git
 
 # more ways to ls (mask)
-alias ls="exa -l --color=always --icons --group-directories-first"
-alias la="exa -lah --color=always --icons --group-directories-first"
+alias ls='exa -l --color=always --icons --group-directories-first'
+alias la='exa -lah --color=always --icons --group-directories-first'
 alias ldot='exa -ld --color=always --icons --group-directories-first .*'
 
 # git
-alias ga=git add .
-alias gs=git status
-alias gc=git checkout
-alias gcb=git checkout -b
-alias gca=git commit --amend
+alias ga='git add .'
+alias gs='git status'
+alias gp='git push'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gca='git commit --amend --no-edit'
 
 # cat (mask)
-alias cat=batcat
+alias bat=batcat
 
 # find
-alias fzf="fzf --preview 'batcat --color=always {}'"
+alias fzf='fzf --preview "batcat --color=always {}"'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 # tar
-alias tarls="tar -tvf"
-alias untar="tar -xf"
+alias tarls='tar -tvf'
+alias untar='tar -xf'
 ```
 
 ## What's included
@@ -56,5 +57,7 @@ A sample antidote `.zsh_plugins.txt` file that bundles plugins with the followin
 
 ## Installation
 
-1. Run `./install.sh`
-2. Copy `.wezterm.lua` to your bare metal machine's HOME directory. e.g. `C:\Users\andrew\.wezterm.lua`
+1. Install wezterm from `https://wezfurlong.org/wezterm/install/windows.html`
+2. Copy `https://raw.githubusercontent.com/AndrewCloss/.dotfiles/refs/heads/master/wezterm/.wezterm.lua` into your Windows' %UserProfile% folder. e.g. `C:\Users\andrew`
+3. Start wezterm
+4. Run `git clone --recursive https://github.com/AndrewCloss/.dotfiles.git ~/.dotfiles && ~/.dotfiles/install.sh`
