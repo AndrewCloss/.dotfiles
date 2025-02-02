@@ -32,9 +32,5 @@ sudo apt -y autoremove
 bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 source $ZDOTDIR/.zshrc
 
-# git
-git config --global user.name "Andrew Closs"
-git config --global user.email "andrewcloss@gmail.com"
-
 # start a new zsh session
 zsh
