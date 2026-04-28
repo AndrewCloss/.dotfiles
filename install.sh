@@ -31,7 +31,7 @@ sudo usermod -a -G docker $USER
 
 # install boilerplate apps
 sudo apt update
-sudo apt install -y zsh exa vim bat fzf ripgrep
+sudo apt install -y zsh eza vim bat fzf ripgrep
 bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
 
 # use zsh as default shell
